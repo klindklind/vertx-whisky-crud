@@ -1,4 +1,4 @@
-#vertx-whisky-crud
+# vertx-whisky-crud
 
 Simple CRUD tryout based on *Vert.x Gradle Starter*
 
