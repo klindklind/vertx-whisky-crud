@@ -4,6 +4,7 @@ import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.core.json.Json;
+import io.vertx.ext.jdbc.JDBCClient;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.RoutingContext;
 import io.vertx.ext.web.handler.BodyHandler;
@@ -16,9 +17,11 @@ public class MainVerticle extends AbstractVerticle {
 
     // Store our product
     private Map<Integer, Whisky> products = new LinkedHashMap<>();
+    private JDBCClient jdbc;
 
     @Override
     public void start(Future<Void> future) {
+        jdbc = JDBCClient.createShared(vertx, config(), "My-Whisky-Collection");
         createSomeData();
 
         Router router = Router.router(vertx);

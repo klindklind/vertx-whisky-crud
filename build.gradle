@@ -19,6 +19,8 @@ def doOnChange = './gradlew classes'
 dependencies {
     compile "io.vertx:vertx-core:$vertxVersion"
     compile "io.vertx:vertx-web:$vertxVersion"
+    compile "io.vertx:vertx-jdbc-client:$vertxVersion"
+    compile "org.hsqldb:hsqldb:2.3.4"
     compileOnly "org.projectlombok:lombok:1.16.16"
     testCompile "junit:junit:4.12"
     testCompile "io.vertx:vertx-unit:$vertxVersion"

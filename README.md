@@ -20,7 +20,13 @@ To build the project, just use:
 It generates a _fat-jar_ in the `build/libs` directory. Run it
 
 ```
-java -jar build/libs/vertx-whiskey-crud-fat.jar 
+java -jar build/libs/vertx-whiskey-crud-fat.jar
+```
+
+Running with custom configuration
+
+```
+java -jar build/libs/vertx-whiskey-crud-fat.jar -conf custom-application-conf.json
 ```
 
 #### Vert.x Gradle Starter
